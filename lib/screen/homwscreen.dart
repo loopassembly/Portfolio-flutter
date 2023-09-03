@@ -4,9 +4,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_link_previewer/flutter_link_previewer.dart';
-
-// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -22,11 +19,9 @@ class _HomeScreenState extends State<HomeScreen> {
   double imageTopPositionPortrait = 410;
   double imageTopPositionLandscape = 20;
   double imageTopPosition = 410;
- 
-  
+
   final String whatsappNumber = '+916205840930';
-  final String _errorImage =
-      "https://i.ytimg.com/vi/z8wrRRR7_qU/maxresdefault.jpg";
+
   void _opacitychanger() {
     setState(() {
       if (_boolopacity == true) {
@@ -40,11 +35,9 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void handlePanelSlide(double slideAmount) {
-    // Determine the current orientation
     final isPortrait =
         MediaQuery.of(context).orientation == Orientation.portrait;
 
-    // Update the position of the image based on the orientation
     setState(() {
       if (isPortrait) {
         imageTopPositionPortrait = 410 - slideAmount * 230;
@@ -55,10 +48,6 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void handleOrientationChange(Orientation orientation, double slideAmount) {
-    // Close the sliding panel
-    // _panelController.close();
-
-    // Update the position of the image based on the orientation
     setState(() {
       if (orientation == Orientation.portrait) {
         if (_panelController.isPanelOpen) {
@@ -94,15 +83,11 @@ class _HomeScreenState extends State<HomeScreen> {
   bool isContentLoaded = false; // Track whether the content is loaded
 
   Future<void> loadContent() async {
-    // Simulate loading by adding a delay (you can replace this with your actual loading logic)
     await Future.delayed(Duration(seconds: 2));
-
-    // Set isContentLoaded to true once the content is loaded
     isContentLoaded = true;
   }
 
   Widget buildLoadingScreen() {
-    // You can customize your loading screen here
     return Center(
       child: CircularProgressIndicator(),
     );
@@ -112,7 +97,6 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
 
-    // Loop through the projects list and fetch metadata for each URL
     for (Project project in projects) {
       _getMetadata(project.url.toString());
     }
@@ -124,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
       Metadata? _metadata = await AnyLinkPreview.getMetadata(
         link: url,
         cache: Duration(days: 7),
-        proxyUrl: "https://cors-anywhere.herokuapp.com/", // Needed for web app
+        proxyUrl: "https://cors-anywhere.herokuapp.com/",
       );
       debugPrint("URL6 => ${_metadata?.title}");
       debugPrint(_metadata?.desc);
@@ -144,14 +128,12 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   @override
-  
   Widget build(BuildContext context) {
     return Scaffold(
       body: OrientationBuilder(builder: (context, orientation) {
         // if (!isContentLoaded) {
         //   isContentLoaded = true;
 
-        //   // Show loading screen while waiting for content to load
         //   return buildLoadingScreen();
         // } else {
         return WillPopScope(
@@ -176,7 +158,6 @@ class _HomeScreenState extends State<HomeScreen> {
           },
           child: Stack(
             children: <Widget>[
-              // Cover Photo
               SlidingUpPanel(
                 // onPanelOpened: () {
                 //   _opacitychanger();
@@ -189,7 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(25),
                     topRight: Radius.circular(25)),
-                minHeight: 350, // Set the minimum height of the panel
+                minHeight: 350,
                 maxHeight: MediaQuery.of(context).size.height - 200,
                 // Set the maximum height of the panel
                 panel: Container(
@@ -280,28 +261,23 @@ class _HomeScreenState extends State<HomeScreen> {
                             mainAxisSize: MainAxisSize.min,
                             children: projects.map((project) {
                               return Padding(
-                                padding: EdgeInsets.only(
-                                    bottom:
-                                        0), // Adjust the space between items
+                                padding: EdgeInsets.only(bottom: 0),
                                 child: ListTile(
                                   title: AnyLinkPreview.builder(
                                       link: project.url.toString(),
                                       itemBuilder:
                                           (context, metadata, imageProvider) {
                                         if (metadata.image == null) {
-                                          // If metadata or image is not available, show a loading spinner or placeholder image
-                                          return CircularProgressIndicator(); // You can replace this with your preferred loading indicator
+                                          return CircularProgressIndicator();
                                         }
 
                                         return Card(
                                           elevation: 10,
-                                          // Adjust the elevation as needed
                                           shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(20),
                                             side: const BorderSide(
                                                 color: Colors.grey, width: 1),
-                                            // Adjust the border radius as needed
                                           ),
                                           margin: const EdgeInsets.symmetric(
                                               vertical: 10, horizontal: 15),
@@ -389,8 +365,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 header: Center(
                   child: Container(
-                    
-                    margin: EdgeInsets.symmetric(vertical: 13,horizontal: MediaQuery.of(context).size.width/2-25),
+                    margin: EdgeInsets.symmetric(
+                        vertical: 13,
+                        horizontal: MediaQuery.of(context).size.width / 2 - 25),
                     height: 5,
                     width: 50,
                     decoration: BoxDecoration(
@@ -438,8 +415,6 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           );
                         }
-                        ;
-                        // Add your contact logic here
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.black, // Background color
@@ -525,7 +500,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Color.fromARGB(255, 250, 249, 249),
                     size: 20,
                   ),
-                  // Customize the FAB's background color
                 ),
               ),
               Positioned(
@@ -544,7 +518,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       );
                     }
-                    // Add your FAB action here
                   },
                   backgroundColor: Colors.black87,
                   child: const Icon(
@@ -552,7 +525,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Color.fromARGB(255, 245, 242, 242),
                     size: 20,
                   ),
-                  // Customize the FAB's background color
                 ),
               ),
               Positioned(
@@ -571,7 +543,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       );
                     }
-                    // Add your FAB action here
                   },
                   backgroundColor: Colors.black87,
                   child: const Icon(
@@ -579,7 +550,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Color.fromARGB(255, 245, 242, 242),
                     size: 20,
                   ),
-                  // Customize the FAB's background color
                 ),
               ),
               Positioned(
@@ -597,7 +567,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       );
                     }
-                    // Add your FAB action here
                   },
                   backgroundColor: Colors.black87,
                   child: const Icon(
@@ -605,7 +574,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Color.fromARGB(255, 245, 242, 242),
                     size: 20,
                   ),
-                  // Customize the FAB's background color
                 ),
               ),
             ],
@@ -625,5 +593,3 @@ class Project {
     required this.url,
   });
 }
-
-// add 
