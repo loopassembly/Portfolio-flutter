@@ -73,6 +73,7 @@ flutter:
     - assets/cover.png
     - assets/srm.png
     - assets/arrow.png
+    - assets/bg6-an.gif
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

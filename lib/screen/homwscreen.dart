@@ -159,6 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Stack(
             children: <Widget>[
               SlidingUpPanel(
+                color: Color.fromARGB(255, 243, 240, 240),
                 // onPanelOpened: () {
                 //   _opacitychanger();
                 // },
@@ -174,11 +175,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 maxHeight: MediaQuery.of(context).size.height - 200,
                 // Set the maximum height of the panel
                 panel: Container(
+                  
                   margin: EdgeInsets.only(top: 30),
                   child: SingleChildScrollView(
                     physics: const BouncingScrollPhysics(),
                     padding: EdgeInsets.only(bottom: 70),
                     child: Column(
+                    
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Container(
@@ -364,7 +367,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 header: Center(
+
                   child: Container(
+                    
                     margin: EdgeInsets.symmetric(
                         vertical: 13,
                         horizontal: MediaQuery.of(context).size.width / 2 - 25),
@@ -387,16 +392,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [
-                      const Color(0xFFffffff).withOpacity(0.9),
-                      const Color(0xFFFFFFFF).withOpacity(0.9),
+                      Color.fromARGB(255, 243, 240, 240).withOpacity(0.9),
+                      Color.fromARGB(255, 243, 240, 240).withOpacity(0.9),
                     ],
                   ),
                   borderGradient: LinearGradient(
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [
-                      const Color(0xFFffffff).withOpacity(0.8),
-                      const Color((0xFFFFFFFF)).withOpacity(0.8),
+                      const Color.fromARGB(255, 243, 240, 240).withOpacity(0.8),
+                      const Color.fromARGB(255, 243, 240, 240).withOpacity(0.8),
                     ],
                   ),
                   child: Container(
@@ -442,11 +447,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: <Widget>[
                       // Cover Photo
                       Container(
+                        
                         height: 450,
                         decoration: const BoxDecoration(
+                           color: Color.fromARGB(255, 10, 24, 23),
                           image: DecorationImage(
-                            image: AssetImage('assets/profile.jpg'),
-                            fit: BoxFit.cover,
+                            image: AssetImage('assets/bg6-an.gif'),
+                            fit: BoxFit.fill,
                           ),
                         ),
                       ),
