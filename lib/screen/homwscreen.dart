@@ -219,7 +219,58 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: TextStyle(fontSize: 14),
                           ),
                         ),
-                        Container(
+                    Container(
+  margin: const EdgeInsets.only(
+    left: 25,
+    top: 20,
+    right: 7,
+  ),
+  child: const Text(
+    "Skills 🛠",
+    style: TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w900,
+    ),
+  ),
+),
+Container(
+  margin: const EdgeInsets.only(
+    left: 25,
+    top: 20,
+    right: 7,
+  ),
+  child: const Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        "Lang:",
+        style: TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      Text("  - Python"),
+      Text("  - JavaScript"),
+      Text("  - Golang"),
+      Text("  - Dart"),
+      Text("  - C/C++"),
+      SizedBox(height: 10), // Add some space between sections
+      Text(
+        "Framework:",
+        style: TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      Text("  - Django"),
+      Text("  - Express.js"),
+      Text("  - GO-Fiber"),
+      Text("  - Flutter"),
+    ],
+  ),
+),
+
+                          Container(
                             margin: const EdgeInsets.only(
                               left: 25,
                               top: 20,
@@ -233,17 +284,29 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             )),
                         Container(
-                            margin: const EdgeInsets.only(
-                              left: 25,
-                              top: 20,
-                              right: 7,
-                            ),
-                            child: const Text(
-                              "I'm  the founder and CEO of Loopit, a cutting-edge SaaS (Software as a Service) company dedicated to simplifying your software needs.\n At Loopit, our mission is to provide individuals and businesses with seamless solutions to their software requirements. We understand that navigating the ever-evolving world of technology can be daunting, which is why we're here to make it effortless for you.\n With a diverse portfolio of services, Loopit is your one-stop destination for all things digital. We offer top-notch services in web development and app development, crafting stunning and functional digital experiences tailored to your unique needs. Whether you're looking to establish an online presence, launch a new app, or revamp your existing digital platform, we've got you covered.\n Additionally, we specialize in the creation of Discord bots and Telegram bots, enhancing your communication and automation capabilities on these popular platforms. Our bots are designed to streamline your operations, engage your community, and provide valuable insights.\n Data is the lifeblood of the digital age, and Loopit excels at web scraping and automation solutions. We can help you gather valuable data from the web, automate repetitive tasks, and save you time and effort. Our custom scripts are tailored to your specific needs, ensuring efficiency and accuracy in your operations.\n Beyond software, we understand that holistic solutions are essential for success. That's why Loopit is committed to delivering results across various fields. Our multidisciplinary approach allows us to tackle a wide range of challenges, ensuring that your business operates at its peak potential.\n Join us on this exciting journey as we transform the way you interact with technology. At Loopit, innovation knows no bounds, and we're here to turn your ideas into reality. Reach out to us today and let's explore how Loopit can empower your digital presence and business operations. Your software requirements are our passion, and your success is our mission. Let's Loopit together!",
-                              style: TextStyle(
-                                fontSize: 14,
-                              ),
-                            )),
+  margin: const EdgeInsets.only(
+    left: 25,
+    top: 20,
+    right: 7,
+  ),
+  child: const Text(
+    "🚀 Welcome to Loopit! 🌐\n\n"
+    "We simplify your software needs.\n\n"
+    "💡 Our Mission:\n"
+    "To provide seamless software solutions for individuals and businesses.\n\n"
+    "🌟 What We Offer:\n"
+    "• Web & App Development\n"
+    "• Discord & Telegram Bots\n"
+    "• Web Scraping & Automation\n"
+    "• Multidisciplinary Solutions\n\n"
+    "👨‍💻 Let's Innovate Together!\n"
+    "Contact us to empower your digital presence and business operations. Your success is our mission.",
+    style: TextStyle(
+      fontSize: 14,
+    ),
+  ),
+)
+,
                         Container(
                             margin: const EdgeInsets.only(
                               left: 25,
