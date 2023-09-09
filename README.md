@@ -15,11 +15,9 @@
 ## Demo
 
 
+![clip](https://github.com/loopassembly/portfolio-app/assets/62586139/0a8a381e-87a9-416a-ab66-e27e05a0c225)
 
-Uploading Screen_Recording_20230905_164054_9e6f (1).mp4…
 
-
-https://github.com/loopassembly/portfolio-app/assets/62586139/0e49265f-0c18-4e2b-ab1e-5ee9e6b05cce
 ## Contributing
 
 Contributions are always welcome!
