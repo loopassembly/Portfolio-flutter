@@ -31,5 +31,8 @@ Install my-project with npm
 ```bash
   git cone https://github.com/loopassembly/portfolio-app.git
   cd portfolio-app
+  flutter pub get
+  flutter run
+
 ```
     
