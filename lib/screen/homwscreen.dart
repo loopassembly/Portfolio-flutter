@@ -75,6 +75,18 @@ class _HomeScreenState extends State<HomeScreen> {
       name: 'Decentralized Password Manager',
       url: Uri.parse('https://github.com/loopassembly/password-manager.git'),
     ),
+     Project(
+      name: 'Decentralized Password Manager',
+      url: Uri.parse('https://github.com/loopassembly/portfolio-app.git'),
+    ),
+     Project(
+      name: 'Decentralized Password Manager',
+      url: Uri.parse('https://github.com/loopassembly/Fiber-Api.git'),
+    ),
+    //   Project(
+    //   name: 'Decentralized Password Manager',
+    //   url: Uri.parse('https://loopassembly.in'),
+    // ),
 
     // Project(name: "Lightbulb", url: Uri.parse("https://www.litebulb.xyz/")),
     // Project(name: "looopassembly", url: Uri.parse("https://loopassembly.in/"))
