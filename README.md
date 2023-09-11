@@ -18,11 +18,6 @@
 ![clip](https://github.com/loopassembly/portfolio-app/assets/62586139/0a8a381e-87a9-416a-ab66-e27e05a0c225)
 
 
-## Contributing
-
-Contributions are always welcome!
-
-                                     
 
 ## Installation
 
@@ -35,4 +30,10 @@ Install my-project with npm
   flutter run
 
 ```
+## Contributing
+
+Contributions are always welcome!
+
+
+
     
