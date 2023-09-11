@@ -7,6 +7,9 @@
 - [@loopassembly](https://www.github.com/loopassembly)
 
 
+## Objective
+This is a very simple portfolio template using Flutter SDK and Dart made for public use
+
 ## 🛠 Tech stack 
 - lang: Dart 
 - framework: Flutter
